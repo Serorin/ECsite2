@@ -43,31 +43,7 @@ Route::get('/logout',function(){
 Route::get('/menu',function(Request $request){
   $Item = [];
   $id = $request -> get('id');
-
-  if($id === "1"){
-    $Item = DB::table('Girls')->where("id","1")->get();
-  }
-
-  if($id === "2"){
-    $Item = DB::table('Girls')->where("id","2")->get();
-  }
-
-  if($id === "3"){
-    $Item = DB::table('Girls')->where("id","3")->get();
-  }
-
-  if($id === "4"){
-    $Item = DB::table('Girls')->where("id","4")->get();
-  }
-
-  if($id === "5"){
-    $Item = DB::table('Girls')->where("id","5")->get();
-  }
-
-  if($id === "6"){
-    $Item = DB::table('Girls')->where("id","6")->get();
-  }
-
+  $Item = DB::table('Girls')->where("id",$id)->get();
   return view("menu",["Product"=>$Item]);
 });
 
@@ -104,7 +80,4 @@ Route::get('/delete/all',function(){
 });
 
 Auth::routes();
-
-// Auth::routes();
-
 Route::get('/home', 'HomeController@index');
