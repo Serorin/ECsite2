@@ -49,6 +49,7 @@
             <td class="cart_td">{{$Product->price}}</td>
             <td class="cart_td"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="location.href='/delete?index={{$index}}'">削除</button></td>
           </tr>
+          </div>
           @endforeach
           <tr>
             <td></td>
@@ -56,17 +57,17 @@
           </tr>
         </table>
       </div>
+      <br>
+      <div class="cart_button">
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" name="button" onclick="location.href='/'">買い物を続ける</button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" name="button" onclick="location.href='/buypage'">購入</button>
 @else
 <div class="cart_center">
   <p>商品は入っていません。</p>
 </div>
 @endif
 <br>
-  <div class="cart_button">
-    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" name="button" onclick="location.href='/'">買い物を続ける</button>
-    &nbsp;&nbsp;&nbsp;
-    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" name="button" onclick="location.href='/'">購入手続きへ</button>
-  </div>
 
 </body>
 </html>

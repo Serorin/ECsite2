@@ -43,6 +43,10 @@ Route::get('/logout',function(){
   return redirect('/');
 });
 
+Route::get('/buypage',function(){
+  return view('buypage');
+});
+
 Route::get('/menu',function(Request $request){
   $Item = [];
   $id = $request -> get('id');

@@ -1,0 +1,67 @@
+.cart_center {
+  text-align: center;
+  font-family: "Mplus 1p";
+  font-size: 23px;
+  letter-spacing: 7px;
+}
+
+.title{
+    vertical-align: middle;
+    margin-top: 45px;
+}
+
+.navi {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.navi ul {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.navi li {
+  display: inline-block;
+  float: left;
+  width: 25%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-right: solid 1px white;
+  box-sizing: border-box;
+}
+
+.navi a {
+  text-align: center;
+  display: block;
+  padding: 0.5em 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.navi a:hover {
+  background-color: rgb(91, 38, 31);
+  color: white;
+}
+
+.top_right{
+  text-align: right;
+  margin-top: 10pxma;
+}
+
+.buy_center{
+  text-align: center;
+  font-family: "Mplus 1p";
+  font-size: 20px;
+  letter-spacing: 7px;
+
+}
