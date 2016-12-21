@@ -59,15 +59,14 @@
     <table class="top_info_1">
         <tr class="top_info_2">
             <td>お知らせ</td>
-        </tr>
-        <tr>
-            <td>サイトオープン</td>
-            <td>2016.11.03</td>
-        </tr>
-        <tr>
-            <td>メニュー公開</td>
-            <td>2016.11.04</td>
-        </tr>
+          </tr>
+                    @foreach($newslist as $value)
+                        <tr>
+                            <td>{{$value->name}}</td>
+                            <td>{{$value->created_at}}</td>
+                      </tr>
+                   @endforeach
+          </tr>
     </table>
 
     </div>

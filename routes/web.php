@@ -1,4 +1,5 @@
 <?php
+use App\Service\NewsService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +17,9 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-  return view('top');
+  $news = new NewsService();
+    $newslist = $news->getNews();
+  return view('top',compact('newslist'));
 });
 
 Route::get('/long',function(){

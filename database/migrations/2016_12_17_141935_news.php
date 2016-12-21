@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ECsiteGirls extends Migration
+class News extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class ECsiteGirls extends Migration
      */
     public function up()
     {
-      Schema::create('Girls', function (Blueprint $table) {
+        Schema::create('News', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('img');
-            $table->string('price');
+            $table->timestamps();
         });
- }
+    }
 
     /**
      * Reverse the migrations.
@@ -28,6 +27,6 @@ class ECsiteGirls extends Migration
      */
     public function down()
     {
-        Schema::drop('Girls');
+        Schema::drop('News');
     }
 }
